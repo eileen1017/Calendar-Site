@@ -1,0 +1,29 @@
+CREATE TABLE events(
+  id bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  event_title varchar(255) NOT NULL,
+  event_description text,
+  event_date DATE,
+  event_category enum('Study','Work','Fun','Date','Travel','Family','Other') NOT NULL DEFAULT 'Other',
+  event_time varchar(255) NOT NULL,
+  userid mediumint(8) unsigned NOT NULL,
+  PRIMARY KEY (id),
+  foreign key (userid) references userinfo (userid)
+  ) engine = InnoDB default character set = utf8 collate = utf8_general_ci;
+
+
+CREATE TABLE userinfo (
+  userid mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
+  username varchar(40) NOT NULL,
+  password char(255) NOT NULL,
+  PRIMARY KEY (userid)
+) engine = InnoDB default character set = utf8 collate = utf8_general_ci;
+
+
+CREATE TABLE shares (
+  userid mediumint(8) unsigned NOT NULL,
+  username varchar(40) NOT NULL,
+  share_to_user varchar(40) NOT NULL,
+  share_to_user_id mediumint(8) NOT NULL,
+  PRIMARY KEY (userid),
+  CONSTRAINT shares_ibfk_1 FOREIGN KEY (userid) REFERENCES userinfo (userid)
+) engine = InnoDB default character set = utf8 collate = utf8_general_ci;

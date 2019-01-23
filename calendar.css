@@ -1,0 +1,53 @@
+.container {
+                        font-family: 'Muli', sans-serif;
+                        margin-top: 30px; 
+                        margin-bottom: 90px;
+                }
+                thead{
+                        width: 60px;
+                }
+
+                th{
+                        height:30px;
+                        text-align: center;
+                        font-weight: 700;
+                }
+                td{
+                        height: 100px;
+                }
+                .todayclass{
+                        background: yellow;
+
+                }
+                th:nth-of-type(7),td:nth-of-type(7) {
+                        color: blue;
+                }
+                th:nth-of-type(1),td:nth-of-type(1) {
+                        color: red;
+                }
+                .btn-space {
+                        margin-right: 20px;
+                        margin-left: 30px;
+                }
+                .btn-space2 {
+                        margin-right: 20px;
+                }
+                p{
+                        font-size: 18px;
+                }
+                textarea {
+                        width: 300px;
+                        height: 150px;
+                }
+                .loggedin{
+                        display: none;
+                }
+                .EventHandler {
+                        display: none;
+                }
+                .shareCalendar {
+                        display: none;
+                }
+                .category-selector-class{
+                        display: none;
+                }
